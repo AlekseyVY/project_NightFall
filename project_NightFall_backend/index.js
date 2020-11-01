@@ -22,6 +22,13 @@ app.get('/ambient', (req, res) => {
     res.send('/ambient directory online')
 })
 
+app.post('/register', (req, res) => {
+    res.send("/register API endpoint")
+})
+
+app.get('/login', (req, res) => {
+    res.send("/login API endpoint")
+})
 
 
 app.listen(port, () => {
