@@ -10,10 +10,10 @@
             "name": "MIT",
             "url": "https://opensource.org/licenses/MIT"
         },
-        "version":"0.1 alpha"
+        "version":"0.2 alpha"
     },
     "servers": [
-        {"url":"https://api.server.projectNightFall/v0_1"}
+        {"url":"https://api.server.projectNightFall/v0_2"}
     ],
     "paths": {
         "/": {
@@ -61,6 +61,30 @@
                 "responses": {
                     "200": {
                         "description": "returns random ambient sound object based on story genre"
+                    },
+                    "500": {
+                        "description": "returns sorry page and logs error"
+                    }
+                }
+            }
+        },
+        "/register": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "returns confirmation of creating user and returns token for authentification of user"
+                    },
+                    "500": {
+                        "description": "returns sorry page and logs error"
+                    }
+                }
+            }
+        },
+        "/login": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "returns confirmation of user login and returns token for authentication of user"
                     },
                     "500": {
                         "description": "returns sorry page and logs error"
