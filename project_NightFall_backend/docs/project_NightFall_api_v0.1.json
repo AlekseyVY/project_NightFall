@@ -1,0 +1,72 @@
+{
+    "openapi":"3.0.2",
+    "info": {
+        "title":"project NightFall",
+        "description": "this is Final project for cs50 from Harvard university",
+        "contact": {
+            "email": "alekseyVY@gmail.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        },
+        "version":"0.1 alpha"
+    },
+    "servers": [
+        {"url":"https://api.server.projectNightFall/v0_1"}
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "description": "returns login/register page or redirect user to /home if auth token didnt expired",
+                "responses": {
+                    "200": {
+                        "description": "redirects user to /home if auth token didn't expired"
+                    },
+                    "400": {
+                        "description": "returns login/register page"
+                    }
+                }
+            }
+        },
+        "/home": {
+            "get": {
+                "description": "returns main page with reader and settings",
+                "responses": {
+                    "200": {
+                        "description": "returns main page component"
+                    },
+                    "500": {
+                        "description": "returns sorry page and logs error"
+                    }
+                }
+            }
+        },
+        "/random_story": {
+            "get": {
+                "description": "returns random story from database",
+                "responses": {
+                    "200": {
+                        "description": "returns random story object from database"
+                    },
+                    "500": {
+                        "description": "returns sorry page and logs error"
+                    }
+                }
+            }
+        },
+        "/ambient": {
+            "get": {
+                "description": "returns random ambient music based on Genre of story",
+                "responses": {
+                    "200": {
+                        "description": "returns random ambient sound object based on story genre"
+                    },
+                    "500": {
+                        "description": "returns sorry page and logs error"
+                    }
+                }
+            }
+        }
+    }
+}
