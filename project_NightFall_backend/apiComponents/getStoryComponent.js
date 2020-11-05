@@ -1,10 +1,5 @@
-const { sequelize, story} = require('../DB/index')
+const { story } = require('../DB/db')
 const { Sequelize } = require('sequelize');
-
-
-
-sequelize.authenticate();
-console.log('Connection established successfully.')
 
 
 
