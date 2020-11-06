@@ -4,7 +4,7 @@
   "description": "backend for project NightFall",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "author": "Aleksey Vasiliev",
   "license": "ISC",
