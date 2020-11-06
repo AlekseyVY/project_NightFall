@@ -3,7 +3,7 @@ const encryption = require('../services/pwdEncryptionService')
 
 
 
-const createUser = async (username="124312", password="123", email="test@mail.com") => {
+const createUser = async (username, password, email) => {
 
     const hash = await encryption(password)
 
