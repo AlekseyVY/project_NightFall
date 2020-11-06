@@ -1,9 +1,8 @@
-const { user } = require('../DB/db')
-
+const db = require('../models/index.js');
 
 
 const getLogin = async () => {
-    const res = await user.findAll()
+    const res = await db.user.findAll()
     return res
 }
 

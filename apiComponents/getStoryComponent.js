@@ -1,10 +1,8 @@
-const { story } = require('../DB/db')
 const { Sequelize } = require('sequelize');
-
-
+const db = require('../models/index');
 
 const getStory = async () => {
-    const res = await story.findAll({
+    const res = await db.story.findAll({
         order: [ [ Sequelize.fn('RANDOM') ] ],
         limit: 1
     })

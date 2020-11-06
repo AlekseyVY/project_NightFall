@@ -9,6 +9,16 @@
             "name": "dev_test",
             "database": "stories",
             "username": "postgres"
+        },
+        {
+            "previewLimit": 50,
+            "server": "postgres://cufkmtvonoioen:b39d75323955bcc2f36fa90a1ce98b707c68ad27d947158f2dcff848272a1bb8@ec2-54-246-87-132.eu-west-1.compute.amazonaws.com:5432/d5rd9k08c5arku",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "database": "d5rd9k08c5arku",
+            "username": "cufkmtvonoioen",
+            "name": "Heroku_db"
         }
     ]
 }

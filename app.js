@@ -1,7 +1,6 @@
 const express = require('express')
 const getStory = require('./apiComponents/getStoryComponent.js')
 const asyncMiddleware = require('./middlewares/asyncMiddleware')
-const { database } = require('./DB/db')
 const createUser = require('./apiComponents/userRegistrationComponent')
 const getLogin  = require('./apiComponents/userLoginComponent')
 
@@ -9,9 +8,8 @@ const router = express()
 const port = process.env.PORT || 3000
 
 
-
-database.authenticate();
-console.log('Connection to database established successfully.')
+// db.authenticate();
+// console.log('Connection to database established successfully.')
 
 
 
