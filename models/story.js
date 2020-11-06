@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     body: DataTypes.TEXT
   }, {
     sequelize,
+    timestamps: false,
     modelName: 'story',
   });
   return story;
