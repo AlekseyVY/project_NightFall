@@ -1,6 +1,6 @@
 const db = require('../models/index.js');
 const checkPwd = require('../services/checkPwd')
-
+const tokenIssue = require('../services/tokenIssue')
 
 
 const getLogin = async ({ username, password }) => {
@@ -14,12 +14,13 @@ const getLogin = async ({ username, password }) => {
 
 
         const checkResult = await checkPwd(password, res[0].dataValues.password)
-        console.log(checkResult)
         if(checkResult === true){
             //return JWT from here
-            return res
+            const token = tokenIssue(username)
+            console.log(token)
+            return token
         } else {
-            return "error wrong username or password"
+            return "wrong username or password"
         }
     } catch(error) {
         return "wrong username or password"

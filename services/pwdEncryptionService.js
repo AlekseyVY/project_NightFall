@@ -3,8 +3,7 @@ const bcrypt = require('bcrypt')
 
 
 const encryption = async (password) => {
-    const salt = 10;
-    const hashedPwd = await bcrypt.hash(password, salt)
+    const hashedPwd = await bcrypt.hash(password, process.env.SALT_ROUNDS)
     return hashedPwd
 }
 
