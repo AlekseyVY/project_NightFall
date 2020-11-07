@@ -12,6 +12,7 @@
     "database": "d5rd9k08c5arku",
     "host": "ec2-54-246-87-132.eu-west-1.compute.amazonaws.com",
     "dialect": "postgres",
+    "url": "postgres://cufkmtvonoioen:b39d75323955bcc2f36fa90a1ce98b707c68ad27d947158f2dcff848272a1bb8@ec2-54-246-87-132.eu-west-1.compute.amazonaws.com:5432/d5rd9k08c5arku",
     "operatorsAliases": false,
     "use_env_variable": "postgres://cufkmtvonoioen:b39d75323955bcc2f36fa90a1ce98b707c68ad27d947158f2dcff848272a1bb8@ec2-54-246-87-132.eu-west-1.compute.amazonaws.com:5432/d5rd9k08c5arku"
   }
