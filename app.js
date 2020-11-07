@@ -41,16 +41,15 @@ router.get('/random_story', asyncMiddleware(async (req, res, next) => {
 
 
 router.post('/register', jsonParser,  async (req, res) => {
-    console.log(req.body)
     await createUser(req.body)
 })
 
 
 
-router.get('/login', asyncMiddleware(async (req, res, next) => {
-    const user = await getLogin()
+router.get('/login', jsonParser ,async (req, res) => {
+    const user = await getLogin(req.body)
     res.json(user)
-}))
+})
 
 
 
