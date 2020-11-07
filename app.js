@@ -3,15 +3,15 @@ const getStory = require('./apiComponents/getStoryComponent.js')
 const asyncMiddleware = require('./middlewares/asyncMiddleware')
 const createUser = require('./apiComponents/userRegistrationComponent')
 const getLogin  = require('./apiComponents/userLoginComponent')
+const bodyParser = require('body-parser')
 
 const router = express()
 const port = process.env.PORT || 3000
 
 
-// db.authenticate();
-// console.log('Connection to database established successfully.')
 
-
+const jsonParser = bodyParser.json()
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
 
@@ -40,9 +40,10 @@ router.get('/random_story', asyncMiddleware(async (req, res, next) => {
 
 
 
-router.post('/register', asyncMiddleware(async (req, res, next) => {
-    await createUser()
-}))
+router.post('/register', jsonParser,  async (req, res) => {
+    console.log(req.body)
+    await createUser(req.body)
+})
 
 
 
