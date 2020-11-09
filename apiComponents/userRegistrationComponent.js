@@ -2,7 +2,7 @@ const encryption = require('../services/pwdEncryptionService')
 const db = require('../models/index.js');
 
 
-const createUser = async ({ username, password, email }) => {
+const createUser = async ({ username, email, password }) => {
 
     const hash = await encryption(password)
 
