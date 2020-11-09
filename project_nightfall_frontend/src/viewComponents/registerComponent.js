@@ -41,7 +41,7 @@ function RegisterComponent() {
             password: password
         }
 
-        const res = axios.post('https://project-night-fall.herokuapp.com/register', regObject)
+        axios.post('https://project-night-fall.herokuapp.com/register', regObject)
         .then(response => {
             console.log(response)
         })
