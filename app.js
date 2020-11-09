@@ -52,7 +52,7 @@ router.post('/register', jsonParser, async (req, res) => {
 
 router.post('/login', jsonParser ,async (req, res) => {
     const user = await getLogin(req.body)
-    res.send(user)
+    res.send(req.body)
 })
 
 
