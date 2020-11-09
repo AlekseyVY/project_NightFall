@@ -37,7 +37,7 @@ function LoginComponent() {
             username: username,
             password: password
         }
-
+        console.log(process.env.LOGIN_API_URL)
         axios.post(process.env.LOGIN_API_URL, logObject)
         .then(response => {
             console.log(response)

@@ -40,7 +40,7 @@ function RegisterComponent() {
             email: email,
             password: password
         }
-
+        console.log(process.env.REGISTER_API_URL)
         axios.post(process.env.REGISTER_API_URL, regObject)
         .then(response => {
             console.log(response)
