@@ -41,7 +41,7 @@ function RegisterComponent() {
             password: password
         }
 
-        axios.post('https://project-night-fall.herokuapp.com/register', regObject)
+        axios.post(process.env.REGISTER_API_URL, regObject)
         .then(response => {
             console.log(response)
         })

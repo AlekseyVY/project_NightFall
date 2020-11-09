@@ -42,11 +42,9 @@ router.get('/random_story', asyncMiddleware(async (req, res, next) => {
 
 
 
-router.post('/register', jsonParser,  async (req, res) => {
-    console.log('Test:')
-    console.log(req)
-    await createUser(req.body)
-    res.send(req)
+router.post('/register',   async (req, res) => {
+    //await createUser(req.body)
+    res.status(200).send('SUCESS')
 })
 
 
