@@ -13,7 +13,7 @@ var cors = require('cors');
 
 
 const jsonParser = bodyParser.json()
-app.use(cors());
+router.use(cors());
 
 
 
