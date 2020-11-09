@@ -12,18 +12,15 @@ const getLogin = async ({ username, password }) => {
         })
 
 
-
         const checkResult = await checkPwd(password, res[0].dataValues.password)
         if(checkResult === true){
-            //return JWT from here
             const token = tokenIssue(username)
-            console.log(token)
             return token
         } else {
             return "wrong username or password"
         }
     } catch(error) {
-        return "wrong username or password"
+        return error
     }
 }
 
