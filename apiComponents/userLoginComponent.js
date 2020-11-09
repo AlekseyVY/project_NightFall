@@ -4,7 +4,7 @@ const tokenIssue = require('../services/tokenIssue')
 
 
 const getLogin = async ({ username, password }) => {
-    try {
+
         const res = await db.user.findAll({
             where: {
                 username: username
@@ -19,9 +19,6 @@ const getLogin = async ({ username, password }) => {
         } else {
             return "wrong username or password"
         }
-    } catch(error) {
-        return error
-    }
 }
 
 
