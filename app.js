@@ -44,7 +44,7 @@ router.post('/register', jsonParser,  async (req, res) => {
     console.log('Test:')
     console.log(req)
     await createUser(req.body)
-    return res
+    res.send(req)
 })
 
 
