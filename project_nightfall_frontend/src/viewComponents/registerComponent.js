@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+require('dotenv').config()
 const axios = require('axios');
 
 
@@ -40,7 +41,7 @@ function RegisterComponent() {
             password: password
         }
 
-        axios.post('http://localhost:3000/register', regObject)
+        axios.post(process.env.REGISTER_API_URL, regObject)
         .then((res) => {
             console.log(res)
         })
