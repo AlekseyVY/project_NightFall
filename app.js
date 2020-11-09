@@ -28,8 +28,6 @@ const jsonParser = bodyParser.json()
 
 
 router.get('/random_story', asyncMiddleware(async (req, res, next) => {
-    console.log('Test:')
-    console.log(req)
     const story = await getStory()
     res.json(story)
 }))
@@ -43,6 +41,8 @@ router.get('/random_story', asyncMiddleware(async (req, res, next) => {
 
 
 router.post('/register', jsonParser,  async (req, res) => {
+    console.log('Test:')
+    console.log(req)
     await createUser(req.body)
 })
 
