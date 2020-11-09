@@ -28,6 +28,8 @@ const jsonParser = bodyParser.json()
 
 
 router.get('/random_story', asyncMiddleware(async (req, res, next) => {
+    console.log('Test:')
+    console.log(req)
     const story = await getStory()
     res.json(story)
 }))
