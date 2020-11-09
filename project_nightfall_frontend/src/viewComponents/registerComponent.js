@@ -40,8 +40,14 @@ function RegisterComponent() {
             email: email,
             password: password
         }
+        const payload = JSON.stringify(regObject)
 
-        const res = await axios.post(process.env.REGISTER_API_URL, regObject)
+        const res = await axios.post('https://project-night-fall.herokuapp.com/register', payload, {
+            headers: {
+              // Overwrite Axios's automatically set Content-Type
+              'Content-Type': 'application/json'
+            }
+            })
         console.log(res)
     }
 
