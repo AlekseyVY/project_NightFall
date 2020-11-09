@@ -33,22 +33,18 @@ function RegisterComponent() {
     const [password, setPassword] = useState('')
 
 
-    async function handleSubmit(event){
+    function handleSubmit(event){
         event.preventDefault();
         const regObject = {
             username: username,
             email: email,
             password: password
         }
-        const payload = JSON.stringify(regObject)
 
-        const res = await axios.post('https://project-night-fall.herokuapp.com/register', payload, {
-            headers: {
-              // Overwrite Axios's automatically set Content-Type
-              'Content-Type': 'application/json'
-            }
-            })
-        console.log(res)
+        const res = axios.post('https://project-night-fall.herokuapp.com/register', regObject)
+        .then(response => {
+            console.log(response)
+        })
     }
 
         return (
