@@ -16,7 +16,7 @@ const getLogin = async ({ username, password }) => {
         if(checkResult === true){
             //return JWT from here
             const token = tokenIssue(username)
-            return JSON.stringify(token)
+            return token
         } else {
             return "wrong username or password"
         }
