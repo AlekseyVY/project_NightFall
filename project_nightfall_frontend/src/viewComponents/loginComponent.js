@@ -38,7 +38,7 @@ function LoginComponent() {
             password: password
         }
         console.log(process.env.LOGIN_API_URL)
-        axios.post(process.env.LOGIN_API_URL, logObject)
+        axios.post('https://project-night-fall.herokuapp.com/login', logObject)
         .then(response => {
             console.log(response)
         })
