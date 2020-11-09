@@ -44,7 +44,6 @@ router.get('/random_story', asyncMiddleware(async (req, res, next) => {
 
 router.post('/register', jsonParser, async (req, res) => {
     await createUser(req.body)
-    //issue JWT token
     res.status(200).send("Sucess")
 })
 
