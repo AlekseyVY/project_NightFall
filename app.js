@@ -42,7 +42,7 @@ router.get('/random_story', asyncMiddleware(async (req, res, next) => {
 
 
 
-router.post('/register',   async (req, res) => {
+router.post('/register', jsonParser, async (req, res) => {
     //await createUser(req.body)
     res.status(200).send('SUCESS')
 })
