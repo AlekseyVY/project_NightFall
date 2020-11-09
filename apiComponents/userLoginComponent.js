@@ -10,9 +10,8 @@ const getLogin = async ({ username, password }) => {
                 username: username
             }
         })
-        return res
 
-        const checkResult = await checkPwd(password, res[0].dataValues.password)
+        const checkResult = await checkPwd(password, response.data[0].password)
         if(checkResult === true){
             const token = tokenIssue(username)
             return token

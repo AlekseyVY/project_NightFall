@@ -39,9 +39,7 @@ function LoginComponent() {
         }
         axios.post('https://project-night-fall.herokuapp.com/login', logObject)
         .then(response => {
-            const res = response
-            console.log(res)
-            return res
+            console.log(response)
         })
     }
 
