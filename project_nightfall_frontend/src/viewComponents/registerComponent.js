@@ -33,7 +33,7 @@ function RegisterComponent() {
     const [password, setPassword] = useState('')
 
 
-    function handleSubmit(event){
+    async function handleSubmit(event){
         event.preventDefault();
         const regObject = {
             username: username,
@@ -41,10 +41,8 @@ function RegisterComponent() {
             password: password
         }
 
-        axios.post(process.env.REGISTER_API_URL, regObject)
-        .then((res) => {
-            console.log(res)
-        })
+        const res = await axios.post(process.env.REGISTER_API_URL, regObject)
+        console.log(res)
     }
 
         return (
