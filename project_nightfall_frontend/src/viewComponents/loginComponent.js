@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 const axios = require('axios');
+const history = useHistory();
 
 
 
@@ -37,10 +38,12 @@ function LoginComponent() {
             username: username,
             password: password
         }
-        axios.post('https://project-night-fall.herokuapp.com/login', logObject)
+        const resp = axios.post('https://project-night-fall.herokuapp.com/login', logObject)
         .then(response => {
             console.log(response)
+            return response
         })
+        console.log(res)
     }
 
         return (

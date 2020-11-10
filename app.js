@@ -3,6 +3,7 @@ const getStory = require('./apiComponents/getStoryComponent.js')
 const asyncMiddleware = require('./middlewares/asyncMiddleware')
 const createUser = require('./apiComponents/userRegistrationComponent')
 const getLogin  = require('./apiComponents/userLoginComponent')
+const tokenVerify = require('./middlewares/tokenVerification')
 const bodyParser = require('body-parser')
 require('dotenv').config()
 
@@ -30,8 +31,9 @@ router.use(cors());
 
 
 router.get('/random_story', asyncMiddleware(async (req, res, next) => {
-    const story = await getStory()
-    res.json(story)
+    const result = tokenVerify(req)
+    // const story = await getStory()
+    res.json(result)
 }))
 
 
