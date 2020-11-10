@@ -30,7 +30,7 @@ function LoginComponent() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
-    const history = useHistory();
+    // const history = useHistory();
 
     function handleSubmit(event){
         event.preventDefault();
