@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 const axios = require('axios');
-const history = useHistory();
+import { useHistory } from "react-router-dom";
 
 
 
@@ -30,7 +30,8 @@ border-radius: 3px;
 function LoginComponent() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-
+    
+    const history = useHistory();
 
     function handleSubmit(event){
         event.preventDefault();
