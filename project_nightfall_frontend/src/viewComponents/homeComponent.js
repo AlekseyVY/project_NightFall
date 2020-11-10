@@ -1,22 +1,14 @@
 import React from 'react'
+import NavComponent from "./navComponent"
+
+
+function HomeComponent() {
 
 
 
-class HomeComponent extends React.Component {
-    constructor(props){
-        super(props)
-
-        this.state = {
-            test: props
-        }
-    }
-
-
-    render(){
-        return(
-            <div><h1>THIS IS HOME PAGE</h1></div>
-        )
-    }
+    return(
+        <NavComponent />
+    )
 }
 
 

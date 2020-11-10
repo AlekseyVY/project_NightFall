@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import NavLoginComponent from './navLoginComponent'
+
+
+
 const axios = require('axios');
 
 
@@ -46,6 +50,8 @@ function RegisterComponent() {
     }
 
         return (
+            <div>
+                <NavLoginComponent />
             <FormContainer onSubmit={handleSubmit}>
             <form >
                 <div>
@@ -69,6 +75,7 @@ function RegisterComponent() {
                 <Button type="submit" value="Submit">Submit</Button>
             </form>
             </FormContainer>
+            </div>
         )
     }
 

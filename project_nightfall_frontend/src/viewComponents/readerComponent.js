@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import { getToken, getAuth } from "../services/localStorageService"
 import { setStory, getStory } from '../services/localStorageService'
+import NavLogoutComponent from './navLogoutComponent'
+import NavLoginComponent from './navLoginComponent'
+
+
 const axios = require('axios');
 
 
@@ -19,9 +23,9 @@ function ReaderComponent() {
              setState(getStory())
          }
 
-         console.log(state)
         return (
             <div>
+                <NavLogoutComponent />
                 <div>
                     <h1>
                         {state.title}
@@ -42,7 +46,12 @@ function ReaderComponent() {
         )
     } else {
         return (
-            <div><h1>Please Authorize for services.</h1></div>
+            <div>
+                <NavLoginComponent />
+            <div>
+                <h1>Please Authorize for services.</h1>
+            </div>
+            </div>
         )
     }
 }

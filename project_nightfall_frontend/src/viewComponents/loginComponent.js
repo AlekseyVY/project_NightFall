@@ -2,8 +2,12 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useHistory } from "react-router-dom";
 import { setAuth, storeToken } from "../services/localStorageService"
-const axios = require('axios');
+import NavLoginComponent from './navLoginComponent'
 
+
+
+
+const axios = require('axios');
 
 const FormContainer = styled.div`
 display: flex;
@@ -39,17 +43,19 @@ function LoginComponent() {
             password: password
         }
         const resp = await axios.post('https://project-night-fall.herokuapp.com/login', logObject)
-        if(resp.data.token != "wrong username or password"){
+        if(resp.data.token !== "wrong username or password"){
             setAuth(true)
             storeToken(resp.data.token)
             history.push('/story')
         } else {
             setAuth(false)
-            console.log('POSHEL NAHUY')
+            alert('Wrong username or password')
         }
     }
 
         return (
+            <div>
+            <NavLoginComponent />
             <FormContainer onSubmit={handleSubmit}>
             <form >
                 <div>
@@ -67,6 +73,7 @@ function LoginComponent() {
                 <Button type="submit" value="Submit">Submit</Button>
             </form>
             </FormContainer>
+            </div>
         )
     }
 
