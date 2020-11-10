@@ -32,7 +32,7 @@ function LoginComponent() {
 
     // const history = useHistory();
 
-    function handleSubmit(event){
+    async function handleSubmit(event){
         event.preventDefault();
         const logObject = {
             username: username,
