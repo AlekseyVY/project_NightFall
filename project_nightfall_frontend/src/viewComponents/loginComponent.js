@@ -38,10 +38,7 @@ function LoginComponent() {
             username: username,
             password: password
         }
-        const resp = axios.post('https://project-night-fall.herokuapp.com/login', logObject)
-        .then(response => {
-            return response
-        })
+        const resp = await axios.post('https://project-night-fall.herokuapp.com/login', logObject)
         console.log(resp)
     }
 
