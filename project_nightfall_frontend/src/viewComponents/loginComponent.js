@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-const axios = require('axios');
 import { useHistory } from "react-router-dom";
 
-
+const axios = require('axios');
 
 
 const FormContainer = styled.div`
@@ -30,7 +29,7 @@ border-radius: 3px;
 function LoginComponent() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    
+
     const history = useHistory();
 
     function handleSubmit(event){
