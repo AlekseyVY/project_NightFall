@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-// import { useHistory } from "react-router-dom";
-
+import { useHistory } from "react-router-dom";
+import { setAuth, storeToken } from "../services/localStorageService"
 const axios = require('axios');
 
 
@@ -30,7 +30,7 @@ function LoginComponent() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
-    // const history = useHistory();
+    const history = useHistory();
 
     async function handleSubmit(event){
         event.preventDefault();
@@ -39,7 +39,14 @@ function LoginComponent() {
             password: password
         }
         const resp = await axios.post('https://project-night-fall.herokuapp.com/login', logObject)
-        console.log(resp)
+        if(resp.data.token != "wrong username or password"){
+            setAuth(true)
+            storeToken(resp.data.token)
+            history.push('/story')
+        } else {
+            setAuth(false)
+            console.log('POSHEL NAHUY')
+        }
     }
 
         return (

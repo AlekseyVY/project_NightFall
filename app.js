@@ -32,8 +32,12 @@ router.use(cors());
 
 router.get('/random_story', asyncMiddleware(async (req, res, next) => {
     const result = tokenVerify(req)
+    if(result) {
+        const story = await getStory()
+    } else {
+        res.status(404)
+    }
     // const story = await getStory()
-    res.json(result)
 }))
 
 

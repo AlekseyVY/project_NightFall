@@ -7,7 +7,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
+import ReaderComponent from './viewComponents/readerComponent';
+import { getAuth, getToken } from "./services/localStorageService"
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route path="/Register">
             <RegisterComponent />
+          </Route>
+          <Route path="/story">
+            <ReaderComponent />
           </Route>
         </Switch>
       </div>
