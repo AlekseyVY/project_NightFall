@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import ReaderComponent from './viewComponents/readerComponent';
 import LogoutComponent from './viewComponents/logoutComponent'
-// import NotFoundComponent from './viewComponents/notFound'
+import CreateStoryComponent from './viewComponents/addStoryComponent'
 
 function App() {
   return (
@@ -26,6 +26,9 @@ function App() {
           </Route>
           <Route path="/logout">
             <LogoutComponent />
+          </Route>
+          <Route path="/createStory">
+            <CreateStoryComponent />
           </Route>
           <Route path="/">
             <HomeComponent />
