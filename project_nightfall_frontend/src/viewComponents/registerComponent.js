@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import NavLoginComponent from './navLoginComponent'
-
+import { useHistory } from "react-router-dom";
 
 
 const axios = require('axios');
@@ -35,18 +35,24 @@ function RegisterComponent() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-
-    function handleSubmit(event){
+    const history = useHistory();
+    
+    async function handleSubmit(event){
         event.preventDefault();
         const regObject = {
             username: username,
             email: email,
             password: password
         }
-        axios.post('https://project-night-fall.herokuapp.com/register', regObject)
-        .then(response => {
-            console.log(response)
-        })
+        const resp = await axios.post('https://project-night-fall.herokuapp.com/register', regObject)
+        if(resp.data.token !== "wrong username or password"){
+            setAuth(true)
+            storeToken(resp.data.token)
+            history.push('/story')
+        } else {
+            setAuth(false)
+            alert('Wrong username or password')
+        }
     }
 
         return (
