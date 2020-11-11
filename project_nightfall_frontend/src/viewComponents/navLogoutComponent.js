@@ -6,14 +6,21 @@ import {
   function navLogoutComponent() {
     return (
   <NavContainer>
-      <Link to="/logout"><Button>Logout</Button></Link>
+      <StyledLink to="/logout"><Button>Logout</Button></StyledLink>
   </NavContainer>
     )
   }
   
   export default navLogoutComponent
 
+  const StyledLink = styled(Link)`
+  text-decoration: none;
 
+  &:focus, &:hover, &:visited, &:link, &:active {
+      text-decoration: none;
+  }
+`;
+  
 
   const NavContainer = styled.div`
 border-radius: 10px;

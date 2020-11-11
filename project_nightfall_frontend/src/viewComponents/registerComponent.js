@@ -26,7 +26,6 @@ function RegisterComponent() {
             password: password
         }
         const resp = await axios.post('https://project-night-fall.herokuapp.com/register', regObject)
-        console.log(resp)
         if(resp.data.token.name !== "SequelizeUniqueConstraintError"){
             setAuth(true)
             storeToken(resp.data.token)
@@ -60,7 +59,9 @@ function RegisterComponent() {
 export default RegisterComponent;
 
 
-const FormMainContainer = styled.div`
+
+const FormMainContainer = styled.form`
+border-radius: 10px;
     margin-top: 20vh;
     margin-bottom: 20vh;
     width: 50%;
@@ -73,6 +74,7 @@ const FormMainContainer = styled.div`
 `;
 
 const FormContainer = styled.div`
+border-radius: 10px;
     width: 80%;
     position: relative;
     height: 50px;
@@ -87,6 +89,7 @@ const FormContainer = styled.div`
 `;
 
 const FormInput = styled.input`
+border-radius: 10px;
 margin-top: 10px;
     width: 100%;
     height: 30px;

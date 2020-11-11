@@ -52,6 +52,7 @@ function LoginComponent() {
 export default LoginComponent;
 
 const FormMainContainer = styled.form`
+border-radius: 10px;
 margin-top: 20vh;
 margin-bottom: 29vh;
 width: 50%;
@@ -64,6 +65,7 @@ box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.1
 `;
 
 const FormContainer = styled.div`
+border-radius: 10px;
 width: 80%;
 position: relative;
 height: 50px;
@@ -78,6 +80,7 @@ box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.1
 `;
 
 const FormInput = styled.input`
+border-radius: 10px;
 margin-top: 10px;
 width: 100%;
 height: 30px;
