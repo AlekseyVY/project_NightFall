@@ -23,7 +23,6 @@ module.exports = {
       },
       body: {
         type: Sequelize.TEXT,
-        unique: true,
         allowNull: false
       }
     });

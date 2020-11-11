@@ -64,6 +64,8 @@ function RegisterComponent() {
                    author:
                     <input type="text" name="author" value={author}  onChange={(e) => setAuthor(e.target.value)} />
                 </label>
+                </div>
+                <div>
                 <label>
                    description:
                     <input type="text" name="description" value={description}  onChange={(e) => setDescription(e.target.value)} />
