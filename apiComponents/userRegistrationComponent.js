@@ -1,6 +1,6 @@
 const encryption = require('../services/pwdEncryptionService')
 const db = require('../models/index.js');
-const getLogin = require('../apiComponents/userLoginComponent')
+const tokenIssue = require('../services/tokenIssue')
 
 const createUser = async ({ username, email, password }) => {
     try {
