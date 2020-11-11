@@ -9,26 +9,7 @@ const axios = require('axios');
 
 
 
-const FormContainer = styled.div`
-display: flex;
-justify-content: center;
-align-self: center;
-width: 50%;
-border: 1px solid black;
-&:hover {
-    box-shadow: 10px 10px 10px;
-}
-`;
 
-const Button = styled.button`
-background: ${props => props.primary ? "palevioletred" : "white"};
-color: ${props => props.primary ? "white" : "palevioletred"};
-font-size: 1em;
-margin: 1em;
-padding: 0.25em 1em;
-border: 2px solid palevioletred;
-border-radius: 3px;
-`;
 
 function RegisterComponent() {
     const [username, setUsername] = useState('')
@@ -60,7 +41,7 @@ function RegisterComponent() {
             <MainContainer>
                 <NavLoginComponent />
             <FormContainer onSubmit={handleSubmit}>
-            <form >
+            <form>
                 <div>
                 <label>
                     Username:
@@ -88,6 +69,43 @@ function RegisterComponent() {
 
 export default RegisterComponent;
 
+const FormContainer = styled.div`
+display: flex;
+justify-content: center;
+align-self: center;
+width: 50%;
+background: #f2f2f2;
+transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
+&:hover {
+    box-shadow: inset 0px -2px 5px rgb(255, 255, 255),
+      inset 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+`;
+
+const Button = styled.button`
+margin: 10px;
+display: flex;
+height: 50px;
+outline: none;
+width: 100px;
+border: none;
+border-radius: 10px;
+justify-content: center;
+align-items: center;
+background: #f2f2f2;
+transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
+cursor: pointer;
+&:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.02);
+  &:hover {
+    box-shadow: inset 0px -2px 5px rgb(255, 255, 255),
+      inset 0px 2px 5px rgba(0, 0, 0, 0.15);
+  }
+}
+`;
+
 
 const MainContainer = styled.div`
 width: 100%;
@@ -95,4 +113,5 @@ height: 100vh;
 display: flex;
 align-items: center;
 flex-direction: column;
+background: #f2f2f2;
 `;

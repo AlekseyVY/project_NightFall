@@ -38,12 +38,12 @@ function ReaderComponent() {
                         {state.author}
                     </h4>
                 </div>
-                <div>
+                <StoryContainer>
                     <p>
                         {state.body}
                     </p>
-                </div>
-                <button type="submit" value="Submit" onClick={getStoryHandler}>Read Story</button>
+                </StoryContainer>
+                <Button type="submit" value="Submit" onClick={getStoryHandler}>Read Story</Button>
             </MainContainer>
         )
     } else {
@@ -61,7 +61,32 @@ function ReaderComponent() {
 
 export default ReaderComponent;
 
+const Button = styled.button`
+margin: 10px;
+display: flex;
+outline: none;
+height: 50px;
+width: 100px;
+border: none;
+border-radius: 10px;
+justify-content: center;
+align-items: center;
+background: #f2f2f2;
+transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
+cursor: pointer;
+&:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.02);
+  &:hover {
+    box-shadow: inset 0px -2px 5px rgb(255, 255, 255),
+      inset 0px 2px 5px rgba(0, 0, 0, 0.15);
+  }
+}
+`;
 
+const StoryContainer = styled.div`
+    width: 80%;
+`;
 
 const MainContainer = styled.div`
 width: 100%;
@@ -69,4 +94,5 @@ height: 100vh;
 display: flex;
 align-items: center;
 flex-direction: column;
+background: #f2f2f2;
 `;

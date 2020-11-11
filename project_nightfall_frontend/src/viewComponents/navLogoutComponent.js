@@ -6,11 +6,7 @@ import {
   function navLogoutComponent() {
     return (
   <NavContainer>
-  <NavUl>
-    <NavLi>
-      <Link to="/logout">Logout</Link>
-    </NavLi>
-  </NavUl>
+      <Link to="/logout"><Button>Logout</Button></Link>
   </NavContainer>
     )
   }
@@ -29,11 +25,14 @@ border-radius: 10px;
 	background: #f2f2f2;
 `;
 
-const NavLi = styled.li`
+
+const Button = styled.button`
 margin: 10px;
 display: flex;
 height: 50px;
 width: 100px;
+border: none;
+outline: none;
 border-radius: 10px;
 justify-content: center;
 align-items: center;
@@ -48,11 +47,4 @@ cursor: pointer;
       inset 0px 2px 5px rgba(0, 0, 0, 0.15);
   }
 }
-`;
-
-
-const NavUl = styled.ul`
-list-style: none;
-display: flex;
-align-items: center;
 `;

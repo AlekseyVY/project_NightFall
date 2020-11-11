@@ -1,5 +1,5 @@
 import React from 'react'
-import NavComponent from "./navComponent"
+import NavLoginComponent from "./navLoginComponent"
 import styled from 'styled-components'
 
 function HomeComponent() {
@@ -8,7 +8,7 @@ function HomeComponent() {
 
     return(
         <MainContainer>
-        <NavComponent />
+        <NavLoginComponent />
         </MainContainer>
     )
 }
@@ -23,4 +23,5 @@ height: 100vh;
 display: flex;
 align-items: center;
 flex-direction: column;
+background: #f2f2f2;
 `;
