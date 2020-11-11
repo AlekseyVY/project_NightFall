@@ -42,13 +42,13 @@ function RegisterComponent() {
             <FormMainContainer onSubmit={handleSubmit}>
                 <h1>Sign in:</h1>
                 <FormContainer>
-                    <FormInput type="text"  name="username" placeholder="username" autoComplete="off" value={username} required onChange={(e) => setUsername(e.target.value)} />
+                    <FormInput type="text"  name="username" placeholder=" username" autoComplete="off" value={username} required onChange={(e) => setUsername(e.target.value)} />
                 </FormContainer>
                 <FormContainer>
-                    <FormInput type="text" name="e_mail" placeholder="email" value={email} autoComplete="off" required  onChange={(e) => setEmail(e.target.value)} />
+                    <FormInput type="text" name="e_mail" placeholder=" email" value={email} autoComplete="off" required  onChange={(e) => setEmail(e.target.value)} />
                 </FormContainer>
                 <FormContainer>
-                    <FormInput type="password" name="password" placeholder="password" autoComplete="off" value={password} required  onChange={(e) => setPassword(e.target.value)} />
+                    <FormInput type="password" name="password" placeholder=" password" autoComplete="off" value={password} required  onChange={(e) => setPassword(e.target.value)} />
                 </FormContainer>
                 <Button type="submit" value="Submit">Submit</Button>
             </FormMainContainer>
@@ -90,10 +90,10 @@ border-radius: 10px;
 
 const FormInput = styled.input`
 border-radius: 10px;
-margin-top: 10px;
+margin-top: 5px;
     width: 100%;
     height: 30px;
-    padding-top: 10px;
+    padding-top: 5px;
     border: none;
     background: #f2f2f2;
     outline: none;
