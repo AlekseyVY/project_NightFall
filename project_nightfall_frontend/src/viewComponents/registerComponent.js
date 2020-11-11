@@ -46,13 +46,13 @@ function RegisterComponent() {
         }
         const resp = await axios.post('https://project-night-fall.herokuapp.com/register', regObject)
         console.log(resp)
-        if(resp.data.token !== "wrong username or password"){
+        if(resp.data.token.name !== "SequelizeUniqueConstraintError"){
             setAuth(true)
             storeToken(resp.data.token)
             history.push('/story')
         } else {
             setAuth(false)
-            alert('Wrong username or password')
+            alert('UserName or Email already used to Rgister.')
         }
     } //fix
 
