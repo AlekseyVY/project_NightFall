@@ -10,9 +10,11 @@ import {
 import ReaderComponent from './viewComponents/readerComponent';
 import LogoutComponent from './viewComponents/logoutComponent'
 import CreateStoryComponent from './viewComponents/addStoryComponent'
+import styled from 'styled-components'
 
 function App() {
   return (
+    <MainContainer>
     <Router>
         <Switch>
           <Route path="/Login">
@@ -35,7 +37,17 @@ function App() {
           </Route>
         </Switch>
     </Router>
+    </MainContainer>
   );
 }
 
 export default App;
+
+
+
+const MainContainer = styled.div`
+background-color: #efeeee
+height: 100vh;
+display: flex;
+justify-content: center;
+`;

@@ -57,7 +57,7 @@ function RegisterComponent() {
     } //fix
 
         return (
-            <div>
+            <MainContainer>
                 <NavLoginComponent />
             <FormContainer onSubmit={handleSubmit}>
             <form >
@@ -82,8 +82,17 @@ function RegisterComponent() {
                 <Button type="submit" value="Submit">Submit</Button>
             </form>
             </FormContainer>
-            </div>
+            </MainContainer>
         )
     }
 
 export default RegisterComponent;
+
+
+const MainContainer = styled.div`
+width: 100%;
+height: 100vh;
+display: flex;
+align-items: center;
+flex-direction: column;
+`;

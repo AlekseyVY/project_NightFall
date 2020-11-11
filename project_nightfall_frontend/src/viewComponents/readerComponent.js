@@ -3,6 +3,8 @@ import { getToken, getAuth } from "../services/localStorageService"
 import { setStory, getStory } from '../services/localStorageService'
 import NavLogoutComponent from './navLogoutComponent'
 import NavLoginComponent from './navLoginComponent'
+import styled from 'styled-components'
+
 
 
 const axios = require('axios');
@@ -24,7 +26,7 @@ function ReaderComponent() {
          }
 
         return (
-            <div>
+            <MainContainer>
                 <NavLogoutComponent />
                 <div>
                     <h1>
@@ -42,7 +44,7 @@ function ReaderComponent() {
                     </p>
                 </div>
                 <button type="submit" value="Submit" onClick={getStoryHandler}>Read Story</button>
-            </div>
+            </MainContainer>
         )
     } else {
         return (
@@ -58,3 +60,13 @@ function ReaderComponent() {
 
 
 export default ReaderComponent;
+
+
+
+const MainContainer = styled.div`
+width: 100%;
+height: 100vh;
+display: flex;
+align-items: center;
+flex-direction: column;
+`;
