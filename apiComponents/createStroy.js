@@ -2,12 +2,13 @@ const db = require('../models/index.js');
 
 
 
-const createStory = async ({ username, email, password }) => {
+const createStory = async ({ title, author, body, description }) => {
     try {
         await db.story.create({
             title: title,
             author: author,
-            body: body
+            body: body,
+            description: description
         })
         return "Sucess"
     } catch(e){

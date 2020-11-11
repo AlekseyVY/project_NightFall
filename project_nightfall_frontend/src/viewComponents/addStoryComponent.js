@@ -32,6 +32,7 @@ function RegisterComponent() {
     const [title, setTitle] = useState('')
     const [author, setAuthor] = useState('')
     const [body, setBody] = useState('')
+    const [description, setDescription] = useState('')
 
 
     async function handleSubmit(event){
@@ -39,6 +40,7 @@ function RegisterComponent() {
         const storyObject = {
             title: title,
             author: author,
+            description: description,
             body: body
         }
 
@@ -54,13 +56,17 @@ function RegisterComponent() {
                 <div>
                 <label>
                     title:
-                    <input type="text" name="title" value={setTitle}  onChange={(e) => setTitle(e.target.value)} />
+                    <input type="text" name="title" value={title}  onChange={(e) => setTitle(e.target.value)} />
                 </label>
                 </div>
                 <div>
                 <label>
                    author:
                     <input type="text" name="author" value={author}  onChange={(e) => setAuthor(e.target.value)} />
+                </label>
+                <label>
+                   description:
+                    <input type="text" name="description" value={description}  onChange={(e) => setDescription(e.target.value)} />
                 </label>
                 </div>
                 <div>
