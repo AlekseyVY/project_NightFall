@@ -11,10 +11,9 @@ const createUser = async ({ username, email, password }) => {
             password: hash,
             email: email
         })
-
-        const token = await getLogin(username, password)
+        const token = tokenIssue(username)
         return token
-        
+
     } catch(e){
         return e
     }
