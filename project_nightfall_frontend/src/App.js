@@ -47,7 +47,6 @@ export default App;
 
 const MainContainer = styled.div`
 background-color: #efeeee
-height: 100vh;
 display: flex;
 justify-content: center;
 `;

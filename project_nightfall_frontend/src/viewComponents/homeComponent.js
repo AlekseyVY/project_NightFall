@@ -9,12 +9,22 @@ function HomeComponent() {
     return(
         <MainContainer>
         <NavLoginComponent />
+        <PlaceHolder>
+            <h1>
+               404
+            </h1>
+        </PlaceHolder>
         </MainContainer>
     )
 }
 
 
 export default HomeComponent;
+
+const PlaceHolder = styled.div`
+    margin-top: 40vh;
+    font-size: 40px;
+`;
 
 
 const MainContainer = styled.div`
