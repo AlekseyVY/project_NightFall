@@ -54,7 +54,7 @@ function RegisterComponent() {
             setAuth(false)
             alert('Wrong username or password')
         }
-    }
+    } //fix
 
         return (
             <div>
