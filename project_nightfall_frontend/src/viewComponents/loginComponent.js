@@ -55,7 +55,7 @@ const FormMainContainer = styled.form`
 border-radius: 10px;
 margin-top: 20vh;
 margin-bottom: 29vh;
-width: 50%;
+width: 600px;
 display: flex;
 flex-direction: column;
 align-items: center;
