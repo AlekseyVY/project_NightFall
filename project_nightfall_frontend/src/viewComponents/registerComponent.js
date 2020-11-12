@@ -63,7 +63,6 @@ export default RegisterComponent;
 const FormMainContainer = styled.form`
 border-radius: 10px;
     margin-top: 20vh;
-    margin-bottom: 20vh;
     width: 600px;
     display: flex;
     flex-direction: column;
@@ -133,5 +132,10 @@ display: flex;
 align-items: center;
 flex-direction: column;
 background: #f2f2f2;
+margin: 0px;
+padding: 0px;
+
+transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
 `;
 

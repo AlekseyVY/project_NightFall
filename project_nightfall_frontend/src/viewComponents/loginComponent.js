@@ -54,7 +54,6 @@ export default LoginComponent;
 const FormMainContainer = styled.form`
 border-radius: 10px;
 margin-top: 20vh;
-margin-bottom: 29vh;
 width: 600px;
 display: flex;
 flex-direction: column;
