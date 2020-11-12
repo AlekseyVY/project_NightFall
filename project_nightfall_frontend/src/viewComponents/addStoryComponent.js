@@ -74,7 +74,7 @@ function RegisterComponent() {
                 <div>
                 <label>
                     body:
-                    <textarea type="password" name="body" value={body}  onChange={(e) => setBody(e.target.value)} />
+                    <textarea type="text" name="body" value={body}  onChange={(e) => setBody(e.target.value)} />
                 </label>
                 </div>
                 <Button type="submit" value="Submit">Submit</Button>
