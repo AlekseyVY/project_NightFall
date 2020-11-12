@@ -6,7 +6,6 @@ import NavLoginComponent from './navLoginComponent'
 import styled from 'styled-components'
 
 
-
 const axios = require('axios');
 
 
@@ -19,6 +18,7 @@ function ReaderComponent() {
          .then(res => {
             setStory(res)
          })
+
 
          function getStoryHandler(event) {
              event.preventDefault()
@@ -43,7 +43,7 @@ function ReaderComponent() {
                         {state.body}
                     </MainText>
                 </StoryContainer>
-                <Button type="submit" value="Submit" onClick={getStoryHandler}>Read Story</Button>
+                <Button type="submit" value="Submit" onClick={getStoryHandler}>Get Story</Button>
             </MainContainer>
         )
     } else {
@@ -63,8 +63,7 @@ export default ReaderComponent;
 
 const MainText = styled.p`
 font-family: 'Xanh Mono', monospace;
-    letter-spacing: 1px;
-    word-spacing: 10px;
+    word-spacing: 5px;
     line-height: 30px;
     font-size: 20px;
 `;
@@ -97,7 +96,7 @@ const StoryContainer = styled.div`
 `;
 
 const MainContainer = styled.div`
-font-family: 'Xanh Mono', monospace;
+font-family: 'Merriweather', serif;
 width: 100%;
 height: 100%;
 display: flex;
