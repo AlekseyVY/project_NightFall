@@ -39,9 +39,9 @@ function ReaderComponent() {
                     </h4>
                 </div>
                 <StoryContainer>
-                    <p>
+                    <MainText>
                         {state.body}
-                    </p>
+                    </MainText>
                 </StoryContainer>
                 <Button type="submit" value="Submit" onClick={getStoryHandler}>Read Story</Button>
             </MainContainer>
@@ -60,6 +60,14 @@ function ReaderComponent() {
 
 
 export default ReaderComponent;
+
+const MainText = styled.p`
+font-family: 'Xanh Mono', monospace;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+    line-height: 30px;
+    font-size: 20px;
+`;
 
 const Button = styled.button`
 margin: 10px;
@@ -85,12 +93,13 @@ cursor: pointer;
 `;
 
 const StoryContainer = styled.div`
-    width: 80%;
+    width: 1000px;
 `;
 
 const MainContainer = styled.div`
+font-family: 'Xanh Mono', monospace;
 width: 100%;
-height: 100vh;
+height: 100%;
 display: flex;
 align-items: center;
 flex-direction: column;

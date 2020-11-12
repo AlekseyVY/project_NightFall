@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   story.init({
-    title: DataTypes.STRING,
-    author: DataTypes.STRING,
+    title: DataTypes.TEXT,
+    author: DataTypes.TEXT,
     description: DataTypes.TEXT,
     body: DataTypes.TEXT
   }, {

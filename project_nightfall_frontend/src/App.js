@@ -46,9 +46,9 @@ export default App;
 
 
 const MainContainer = styled.div`
-background-color: #efeeee
+background-color: #f2f2f2;
+height: 100vh;
+overflow: scroll;
 display: flex;
 justify-content: center;
-
-transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 `;

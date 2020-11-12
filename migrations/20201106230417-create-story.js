@@ -9,12 +9,12 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       title: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         unique: true,
         allowNull: false
       },
       author: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false
       },
       description: {
