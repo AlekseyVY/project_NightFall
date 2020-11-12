@@ -45,7 +45,7 @@ function RegisterComponent() {
                     <FormInput type="text"  name="username" placeholder=" username" autoComplete="off" value={username} required onChange={(e) => setUsername(e.target.value)} />
                 </FormContainer>
                 <FormContainer>
-                    <FormInput type="text" name="e_mail" placeholder=" email" value={email} autoComplete="off" required  onChange={(e) => setEmail(e.target.value)} />
+                    <FormInput type="email" name="e_mail" placeholder=" email" value={email} autoComplete="off" required  onChange={(e) => setEmail(e.target.value)} />
                 </FormContainer>
                 <FormContainer>
                     <FormInput type="password" name="password" placeholder=" password" autoComplete="off" value={password} required  onChange={(e) => setPassword(e.target.value)} />
