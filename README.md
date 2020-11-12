@@ -19,3 +19,9 @@ that you were redirected on register. After you finish reading stories just hit 
 
 React, Postgres, JWT, bcrypt, express, sequelize ORM, React router, frontend hosted on Netlifly for CI/CD,
 backend served from heroku with Postgres database extension, REST API.
+
+
+#Link for hosted App
+
+frontend: https://flamboyant-banach-a4efe5.netlify.app/
+backend: https://project-night-fall.herokuapp.com/
