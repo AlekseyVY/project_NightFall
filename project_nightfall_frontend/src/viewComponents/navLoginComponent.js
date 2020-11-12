@@ -9,7 +9,7 @@ import {
       <NavContainer>
             <StyledLink to="/"><Button>Home</Button></StyledLink>
             <StyledLink to="/Login"><Button>Login</Button></StyledLink>
-            <StyledLink to="/Register"><Button>Register</Button></StyledLink>
+            <StyledLink to="/Register"><Button>Sign in</Button></StyledLink>
 
       </NavContainer>
     )
