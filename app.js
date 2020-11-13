@@ -4,7 +4,7 @@ const asyncMiddleware = require('./middlewares/asyncMiddleware')
 const createUser = require('./apiComponents/userRegistrationComponent')
 const getLogin  = require('./apiComponents/userLoginComponent')
 const tokenVerify = require('./middlewares/tokenVerification')
-const createStory = require('./apiComponents/createStroy')
+//const createStory = require('./apiComponents/createStroy')
 const bodyParser = require('body-parser')
 require('dotenv').config()
 
@@ -24,12 +24,12 @@ router.use(cors());
 // })
 
 
-router.post('/createStory', jsonParser, async (req, res) => {
-    const resp = await createStory(req.body)
-    res.json({
-        resp
-    })
-})
+// router.post('/createStory', jsonParser, async (req, res) => {
+//     const resp = await createStory(req.body)
+//     res.json({
+//         resp
+//     })
+// })
 
 
 
