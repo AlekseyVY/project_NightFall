@@ -14,3 +14,11 @@ I hosted frontend on Netlifly for learning CI/CD principles and backend is hoste
 # Frontend: https://flamboyant-banach-a4efe5.netlify.app/
 
 # Backend: https://project-night-fall.herokuapp.com/
+
+
+# Instructions to run Project:
+
+You can navigate to links where it is already deployed on hosting platforms, links provided on top of these instructions.
+Or if you want to run project localy just run npm init in root of project to initiate backend dependencies and run npm start,
+for frontend you need to cd into project_nightfall_frontend, run npm init to initiate frontend dependencies of project, change links in axios to localhost where backend is
+running since right now it fetches data from heroku hosted backend and run npm start to run frontend part of project.
