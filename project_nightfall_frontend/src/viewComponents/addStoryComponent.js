@@ -2,7 +2,7 @@
 // import styled from 'styled-components'
 //import NavLoginComponent from './navLoginComponent'
 
-const axios = require('axios');
+// const axios = require('axios');
 
 
 
@@ -28,7 +28,7 @@ const axios = require('axios');
 // border-radius: 3px;
 // `;
 
-// function RegisterComponent() {
+function AddStoryComponent() {
 //     const [title, setTitle] = useState('')
 //     const [author, setAuthor] = useState('')
 //     const [body, setBody] = useState('')
@@ -46,7 +46,6 @@ const axios = require('axios');
 
     //     const resp = await axios.post('https://project-night-fall.herokuapp.com/createStory', storyObject)
     //     console.log(resp)
-    }
 
         return (
             <div>
@@ -85,4 +84,4 @@ const axios = require('axios');
         )
     }
 
-export default RegisterComponent;
+export default AddStoryComponent;
