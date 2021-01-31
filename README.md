@@ -25,8 +25,3 @@ backend served from heroku with Postgres database extension, REST API.
 
 frontend: https://flamboyant-banach-a4efe5.netlify.app/                                                   
 backend: https://project-night-fall.herokuapp.com/
-
-
-# Presentation URL:
-
-https://www.youtube.com/watch?v=zCkDoKgYwTU
