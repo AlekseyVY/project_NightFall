@@ -1,6 +1,6 @@
 # project_NightFall:
 
-This is final project for cs50 from Harvard university.
+This is final project for cs50 from Harvard university
 
 
 
